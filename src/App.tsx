@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Appointment } from "./types/appointment";
 
 /**
  * Write an application that consumes the appointments API endpoint you just built
@@ -16,50 +15,70 @@ import { Appointment } from "./types/appointment";
  *
  */
 
-// export function App() {
-//   const [appointments, setAppointments] = useState<Appointment[]>(
-//     []
-//   );
+interface Appointment {
+  appointmentDateTime: string;
+  customerName: string;
+  experienceName: string;
+  experienceDescription: string;
+  teammateName: string;
+  teammateBio: string;
+  cost: number;
+  canceled: boolean;
+}
 
-//   const onSearch = async () => {
+interface AppState {
+  dateQuery: string;
+  experienceIdQuery: string;
+  teammateIdQuery: string;
+  appointments: Appointment[];
+}
+
+export function App() {
+  const [state, setState] = useState<AppState>({
+    dateQuery: "",
+    experienceIdQuery: "",
+    teammateIdQuery: "",
+    appointments: [],
+  });
+
+  const onSearch = async () => {
+    const response = await fetch("http://localhost:8080/appointments");
+
+    const appointments: Appointment[] = await response.json();
+
+    setState({ ...state, appointments });
+  };
+
+  return (
+    <div>
+      <h1>Appointments Search</h1>
+    </div>
+  );
+}
+
+// export class App extends React.Component<unknown, AppState> {
+//   constructor(props: unknown) {
+//     super(props);
+
+//     this.state = {
+//       searchQuery: "",
+//       appointments: [],
+//     };
+//   }
+
+//   onSearch = async () => {
 //     const response = await fetch("");
 
 //     const appointments: Appointment[] = await response.json();
 
-//     setAppointments(appointments);
+//     this.setState({ ...this.state, appointments });
 //   };
 
-//   return <div></div>;
+//   render() {
+//     return (
+//       <div>
+//         <h1>Appointments Search</h1>
+//       </div>
+//     );
+//   }
 // }
-
-type AppState = {
-  searchQuery: "";
-  appointments: Appointment[];
-};
-
-export class App extends React.Component<unknown, AppState> {
-  constructor(props: unknown) {
-    super(props);
-
-    this.state = {
-      searchQuery: "",
-      appointments: [],
-    };
-  }
-
-  onSearch = async () => {
-    const response = await fetch("");
-
-    const appointments: Appointment[] = await response.json();
-
-    this.setState({ ...this.state, appointments });
-  };
-
-  render() {
-    return (
-      <div>
-        <h1>Appointments Search</h1>
-      </div>
-    );
-  }
-}
