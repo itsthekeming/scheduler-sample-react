@@ -1,0 +1,72 @@
+[
+  {
+    "appointmentDateTime": "2022-05-01T10:00:00.000Z",
+    "customerName": "Marlene Kim",
+    "experienceName": "Batting Cage",
+    "teammateName": "Babe Ruth",
+    "canceled": false
+  },
+  {
+    "appointmentDateTime": "2022-05-01T12:00:00.000Z",
+    "customerName": "Carolyn Hart",
+    "experienceName": "Batting Cage",
+    "teammateName": "Babe Ruth",
+    "canceled": true
+  },
+  {
+    "appointmentDateTime": "2022-05-03T4:30:00.000Z",
+    "customerName": "James Langston",
+    "experienceName": "Batting Cage",
+    "teammateName": "Joe DiMaggio",
+    "canceled": false
+  },
+  {
+    "appointmentDateTime": "2022-05-01T15:00:00.000Z",
+    "customerName": "Matthew Tores",
+    "experienceName": "Golf Lesson",
+    "teammateName": "Tiger Woods",
+    "canceled": true
+  },
+  {
+    "appointmentDateTime": "2022-05-02T13:00:00.000Z",
+    "customerName": "Gerald Summerlin",
+    "experienceName": "Golf Lesson",
+    "teammateName": "Tiger Woods",
+    "canceled": false
+  },
+  {
+    "appointmentDateTime": "2022-05-01T11:00:00.000Z",
+    "customerName": "Laura Salinas",
+    "experienceName": "Golf Lesson",
+    "teammateName": "Tiger Woods",
+    "canceled": false
+  },
+  {
+    "appointmentDateTime": "2022-05-05T11:00:00.000Z",
+    "customerName": "Trudy Quintero",
+    "experienceName": "Golf Lesson",
+    "teammateName": "Tiger Woods",
+    "canceled": false
+  },
+  {
+    "appointmentDateTime": "2022-05-02T16:00:00.000Z",
+    "customerName": "Curt Baker",
+    "experienceName": "Golf Lesson",
+    "teammateName": "Tiger Woods",
+    "canceled": false
+  },
+  {
+    "appointmentDateTime": "2022-05-04T11:00:00.000Z",
+    "customerName": "Mattie Lacey",
+    "experienceName": "Golf Lesson",
+    "teammateName": "Tiger Woods",
+    "canceled": false
+  },
+  {
+    "appointmentDateTime": "2022-05-04T11:00:00.000Z",
+    "customerName": "Trevor Boles",
+    "experienceName": "Rock Climbing Wall",
+    "teammateName": "Lynn Hill",
+    "canceled": false
+  }
+]
